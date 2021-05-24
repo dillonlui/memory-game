@@ -1,13 +1,16 @@
 import React from "react"
+import Header from "./components/Header"
+import Gameboard from "./components/Gameboard"
 
 function App() {
   return (
     <div>
-      <header>
+      <Header />
+      <main>
         <p>
            Hello, world
         </p>
-      </header>
+      </main>
     </div>
   );
 }
