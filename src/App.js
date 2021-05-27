@@ -6,11 +6,7 @@ function App() {
   return (
     <div>
       <Header />
-      <main>
-        <p>
-           Hello, world
-        </p>
-      </main>
+      <Gameboard />
     </div>
   );
 }
