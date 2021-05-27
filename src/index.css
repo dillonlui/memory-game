@@ -10,5 +10,22 @@ body {
 .header {
   text-align: center;
   background-color: blanchedalmond;
-  width: 100%;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 5px dashed blue;
+}
+
+.card {
+  border: 1px solid black;
+  height: 250px;
+  width: 250px;
+  margin: 10px;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 40px #b8860b;
 }
