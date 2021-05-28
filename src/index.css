@@ -5,27 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: blanchedalmond;
 }
 
 .header {
   text-align: center;
-  background-color: blanchedalmond;
+}
+
+.scoreContainer {
+  text-align: end;
+  padding: 15px;
 }
 
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border: 5px dashed blue;
 }
 
 .card {
   border: 1px solid black;
-  height: 250px;
-  width: 250px;
+  height: 146px;
+  width: 146px;
   margin: 10px;
 }
 .card:hover {
   cursor: pointer;
-  box-shadow: 0 0 40px #b8860b;
+  box-shadow: 0 0 30px #b8860b;
 }

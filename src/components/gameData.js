@@ -1,47 +1,47 @@
 let gameData = [
     {
-        name: "test1",
-        img: "",
+        name: "Aeropress",
+        img: "/images/aeropress.jpg",
         clicked: false
     },
     {
-        name: "test2",
-        img: "",
+        name: "Chemex",
+        img: "/images/chemex.jpg",
         clicked: false
     },
     {
-        name: "test3",
-        img: "",
+        name: "Cold Brew",
+        img: "/images/coldBrew.jpg",
         clicked: false
     },
     {
-        name: "test4",
-        img: "",
+        name: "French Press",
+        img: "/images/frenchPress.jpg",
         clicked: false
     },
     {
-        name: "test5",
-        img: "",
+        name: "Mocha Pot",
+        img: "/images/mochaPot.jpg",
         clicked: false
     },
     {
-        name: "test6",
-        img: "",
+        name: "Pour Over",
+        img: "/images/pourOver.jpg",
         clicked: false
     },
     {
-        name: "test7",
-        img: "",
+        name: "Siphon",
+        img: "/images/siphon.jpg",
         clicked: false
     },
     {
-        name: "test8",
-        img: "",
+        name: "Turkish Coffee",
+        img: "/images/turkishCoffee.jpg",
         clicked: false
     },
     {
-        name: "test9",
-        img: "",
+        name: "Vietnamese Coffee",
+        img: "/images/vietnamese.jpg",
         clicked: false
     },
 ]

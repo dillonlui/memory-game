@@ -4,6 +4,8 @@ import gameData from "./gameData"
 
 const Gameboard = () => {
     const [cardArray, setCardArray] = useState([...gameData])
+    let [currentScore, setCurrentScore] = useState(0)
+    let [highScore, setHighScore] = useState(0)
     
     const shuffle = (array) => {
         let currentIndex = array.length, temporaryValue, randomIndex;
@@ -20,20 +22,38 @@ const Gameboard = () => {
         return array;
     }
 
-    const handleClick = () => {
-        let shuffledArray = [...cardArray]
-        setCardArray(shuffle(shuffledArray))
+    const handleClick = (e) => {
+        const index = e.target.parentNode.parentNode.attributes[0].value
+        if (cardArray[index].clicked === false) {
+            let tempArray = [...cardArray]
+            tempArray[index].clicked = !tempArray[index].clicked
+            setCardArray(shuffle([...tempArray]))
+            setCurrentScore(currentScore += 1)
+            if (currentScore > highScore){
+                setHighScore(currentScore)  
+            }
+        } else {
+            setCurrentScore(0)
+            let tempArray = [...cardArray]
+            for (let i = 0; i < tempArray.length; i++){
+                tempArray[i].clicked = false
+            }
+            setCardArray(shuffle(tempArray))
+        }
     }
       
 
     return(
         <div>
-            <p>Hello, this is gameboard</p>
+            <div className="scoreContainer">
+                <p>Current Score: {currentScore}</p>
+                <p>High Score: {highScore}</p>
+            </div>
             <div className="cardContainer">
             {
                 cardArray.map((val, idx) => {
                     return(
-                    <div key={idx} onClick={handleClick}>
+                    <div key={idx} onClick={handleClick} data-id={idx}>
                         <Card data={val} />
                     </div>
                     )
